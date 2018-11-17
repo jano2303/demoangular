@@ -1,0 +1,27 @@
+<h3 style="margin-left:20px">LISTA PRODUCTO</h3>
+<div *ngIf="products">
+<table border="1" style="margin-left:20px" >
+    <thead class="table table-hover table-dark">
+    <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Cantidad</th>
+        <th style="text-align:center">Acción</th>
+    </tr>
+</thead>
+    <tbody>
+    <tr *ngFor="let product of products">
+        <td>{{product.id}}</td>
+        <td>{{product.name}}</td>
+        <td>{{product.price}}</td>
+        <td>{{product.quantity}}</td>
+        <td>
+                <button type="button" class="btn btn-primary" [routerLink]= "['/add']">AGREGAR</button> |
+                <button type="button" class="btn btn-info" (click)="edit(product.id)">EDITAR</button> | 
+                <button type="button" class="btn btn-danger" (click)="delete(product.id)">ELIMINAR</button>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</div>

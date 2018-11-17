@@ -1,0 +1,25 @@
+<h3 style="margin-left:15px;margin-top: 10px">Mi Primera Demo en Angular</h3>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a [routerLink]= "['/index']" class="navbar-brand">MENU</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-tarjet="#navbarSupportedContext" aria-controls="navbarSupportedContext" aria-expanded="false" aria-label="Toggle vavigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                    <a [routerLink]= "['/index']" class="nav-link">INICIO<span class="sr-only">(current)</span></a>
+                </li>
+        <li class="nav-item">
+            <a [routerLink]= "['/add']" class="nav-link">PRODUCTO<span class="sr-only">(current)</span></a>
+        </li>
+
+    </ul>
+</div>
+</nav>
+
+
+
+<br><br>
+<router-outlet></router-outlet>
+<br><br>
+Copyright 2018

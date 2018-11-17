@@ -1,0 +1,39 @@
+<h3 style="margin-left:15px">AGREGAR PRODUCTO</h3>
+<form [formGroup]="productForm" (ngSubmit)="save()">
+    <table style="margin-left:20px">
+        <tr>
+            <td>Id</td>
+            <td>
+                <input type="text" formControlName="id" required="required" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>Nombre</td>
+                <td>
+                    <input type="text" formControlName="name" required="required"/>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Precio</td>
+                <td>
+                    <input type="number" min="0" formControlName="price" />
+                </td>
+        </tr>
+
+        <tr>
+            <td>Cantidad</td>
+                <td>
+                    <input type="number" min="0" formControlName="quantity" />
+                </td>
+        </tr>
+
+        <tr>
+                <td>&nbsp;</td>
+                    <td>
+                        <input class="btn btn-primary" type="submit" value="GUARDAR" />
+                    </td>
+            </tr>
+    </table>
+</form>
